@@ -69,8 +69,8 @@ const GenerateRrr = () => {
   const selectedProductId = watch("product");
 
   React.useEffect(() => {
-    initLoad();
-  }, []);
+    if (configData) initLoad();
+  }, [configData]);
 
   React.useEffect(() => {
     if (selectedBillerId) getBillerProducts(selectedBillerId);

@@ -2,7 +2,7 @@ import { create } from 'apisauce';
 import storage from '../utils/storage';
 
 const apiClient = create({
-  baseURL: '',
+  baseURL: process.env.REACT_APP_API_BASE_URL,
 });
 
 apiClient.addAsyncRequestTransform(async (request: any) => {

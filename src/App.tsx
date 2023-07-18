@@ -22,29 +22,16 @@ function App() {
           <Helmet></Helmet>
           <PreLoader />
 
-          {!isLoadingComplete ? (
-            <div>
-              <ClipLoader
-                color={"#ffffff"}
-                loading={true}
-                cssOverride={override}
-                size={50}
-                aria-label="Loading Spinner"
-                data-testid="loader"
-              />
-            </div>
-          ) : (
-            <>
-              <Header />
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/generate-rrr" element={<GenerateRrr />} />
-                <Route path="/payment-status" element={<PaymentStatus />} />
-              </Routes>
-              <Footer />
-            </>
-          )}
+          <>
+            <Header />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/generate-rrr" element={<GenerateRrr />} />
+              <Route path="/payment-status" element={<PaymentStatus />} />
+            </Routes>
+            <Footer />
+          </>
 
           <Helmet>
             <script src="./assets/js/vendor/modernizr-3.5.0.min.js" />
